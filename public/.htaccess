@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+php_flag display_errors off
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . / [L]
+</IfModule>
